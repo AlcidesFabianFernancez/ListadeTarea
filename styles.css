@@ -1,0 +1,115 @@
+:root {
+    --primary: #57bd9e;
+    --secundary: #033F49;
+    --light: #fff;
+    --dark: #000;
+    --diabled: #e7e7e7;
+    --redorder: #789dca;
+}
+/* toda la pantalla */
+body { 
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    height: 100vh;
+    background-color: var(--diabled); /* color de pantalla*/
+}
+
+*.first-letter { /*div donde esta todo el contenido */
+    text-transform: capitalize;
+}
+
+.roundBorder {
+    border-radius: 5px;
+}
+
+.list {
+    margin: 25px auto;
+    padding: 25px;
+    background-color: var(--light);
+    width: 100%;
+    max-width: 350px;
+}
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dateRight {  /*dia, mes y año*/
+    display: flex;
+    align-items: center;
+}
+
+#dateNumber { /*fecha del mes tamaño de numero*/
+    font-size: 50px;
+}
+
+#dateText { /*dia de la semana*/
+    letter-spacing: 3px;
+    text-transform: uppercase; /*sea todo en mayuscula*/
+}
+
+#dateMonth,
+#dateNumber,
+#dateText {
+    font-weight: bold; /*negrita*/
+}
+
+#dateMonth,
+#dateYear {
+    margin-left: 7px;
+    font-size: 20px;
+}
+
+form { /*formulario*/
+    margin: 20px 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 35px auto;
+    grid-column-gap: 15px;
+}
+
+input { /*caja de texto*/
+    border: none; /*sin border*/
+    padding: 10px; /*tamaño caja de textp*/
+    background-color: var(--diabled); /*color caja de texto*/
+    color: var(--secundary);
+}
+
+input:focus {
+    outline: none;
+}
+
+.addTaskButton,
+.orderButton { /*botones */
+    border: none; /*sin bordes*/
+    font-weight: bold; 
+    cursor: pointer;
+}
+
+.addTaskButton { /*boton agregar*/
+    height: 35px;
+    border-radius: 50%; /*dar forma circular*/
+    font-size: 18px;
+    background-color:var(--primary); /*color de fondo*/
+    color: var(--light)
+}
+
+.orderButton {
+    background-color: var(--redorder);
+    color: var(--light);
+}
+
+.task {
+    background-color:  var(--primary);
+    padding: 15px;
+    margin-top: 15px;
+    color: var(--light);
+    cursor: pointer;
+}
+
+.done {
+    background-color: var(--diabled);
+    text-decoration: line-through; /*tachar el texto*/
+    color: var(--secundary);
+}
